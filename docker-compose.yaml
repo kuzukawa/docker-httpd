@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: ./infra/web/
+    ports:
+      - "8080:80"
+    volumes:
+      - ./apache2/htdocs:/usr/local/apache2/htdocs
+      - ./apache2/conf:/usr/local/apache2/conf
+      
